@@ -124,6 +124,8 @@ clinical-risk-platform/
 ├── .gitignore
 └── README.md
 
+```
+
 ## Screenshots
 
 ### Dashboard
@@ -141,3 +143,6 @@ clinical-risk-platform/
 ### Explainable AI
 
 ![SHAP Explainability](screenshots/explainability.png)
+
+
+
