@@ -743,37 +743,3 @@ def register_clinic(
 # Demo Clinic
 # =========================
 
-@app.post("/clinic/create-demo")
-def create_demo_clinic(
-    db: Session = Depends(get_db),
-):
-    existing = (
-        db.query(Clinic)
-        .filter(
-            Clinic.email == "admin@clinicalai.com"
-        )
-        .first()
-    )
-
-    if existing:
-        return {
-            "message": "Demo clinic already exists"
-        }
-
-    clinic = Clinic(
-        clinic_name="ClinicalAI Demo Clinic",
-        email="admin@clinicalai.com",
-        password_hash=hash_password(
-            "ClinicalAI@123"
-        ),
-        administrator_name="Clinical Admin",
-    )
-
-    db.add(clinic)
-    db.commit()
-    db.refresh(clinic)
-
-    return {
-        "message": "Demo clinic created",
-        "email": clinic.email,
-    }
