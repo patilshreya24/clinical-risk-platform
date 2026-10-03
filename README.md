@@ -123,3 +123,21 @@ clinical-risk-platform/
 │
 ├── .gitignore
 └── README.md
+
+## Screenshots
+
+### Dashboard
+
+![Clinical Risk Intelligence Dashboard](screenshots/dashboard.png)
+
+### Patient Management
+
+![Patient Management](screenshots/patients.png)
+
+### Risk Analysis
+
+![Risk Analysis](screenshots/risk-analysis.png)
+
+### Explainable AI
+
+![SHAP Explainability](screenshots/explainability.png)
